@@ -78,9 +78,9 @@ Mais seule Enelya peut le traverser.</p>
 
 <script>
 function checkPassword() {
-    var pass = document.getElementById("password").value;
+    var pass = document.getElementById("password").value.toUpperCase();
 
-    if ( (pass === "PORTAIL") or (pass === "portail") ) {
+    if(pass === "PORTAIL") {
         window.location.href = "epreuve2.html";
     } else {
         document.getElementById("error").innerText = "Le portail reste fermé.";
