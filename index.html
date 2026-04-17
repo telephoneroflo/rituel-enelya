@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Le Portail</title>
+<style>
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 80px;
+}
+input {
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background: white;
+    border: none;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Le portail est ouvert.</h2>
+<p>Seules celles qui connaissent le premier mot peuvent entrer.</p>
+
+<input type="password" id="password" placeholder="Mot de passe">
+<br>
+<button onclick="checkPassword()">Entrer</button>
+
+<p id="error" style="color:red;"></p>
+
+<script>
+function checkPassword() {
+    var pass = document.getElementById("password").value;
+
+    if(pass === "PORTAIL") {
+        window.location.href = "page2.html";
+    } else {
+        document.getElementById("error").innerText = "Le portail reste fermé.";
+    }
+}
+</script>
+
+</body>
+</html>
