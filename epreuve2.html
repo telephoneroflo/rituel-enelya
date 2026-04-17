@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Le Portail</title>
+<style>
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 80px;
+}
+input {
+    padding: 14px;
+    width: 220px;
+    border: 1px solid white;
+    border-radius: 25px;
+    background: transparent;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input::placeholder {
+    color: rgba(255,255,255,0.5);
+}
+
+input:focus {
+    border-color: white;
+    box-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+button {
+    margin-top: 15px;
+    padding: 12px 28px;
+    border-radius: 25px;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: white;
+    color: black;
+}
+</style>
+</head>
+
+<body>
+    
+<img src="logo.jpg" style="width:80px; margin:0; padding:0; ">
+<br>
+    
+<h2 style="font-weight:300; letter-spacing:2px;">
+Épreuve de perception
+</h2>
+
+<p style="max-width:300px; margin:auto; opacity:0.8;">
+Tu as franchi le seuil ...<br><br>
+
+mais ce que tu vois n’est pas encore la vérité.<br><br>
+
+Ici, rien ne se lit comme ailleurs.<br><br>
+
+Les formes ne sont pas toujours des lettres ...<br>
+et les lettres ne sont pas toujours ce qu’elles semblent être.<br><br>
+
+Si tu veux avancer,<br><br>
+
+tu devras cesser de lire ...<br><br>
+
+et commencer à reconnaître.
+</p>
+
+<div class="code">
+ᛈ3ᚱᚲ3ᛈᛏ10ᚾ
+</div>
+
+<div class="hint">
+ᛈ 3 ᚱ ᚲ 3 ᛈ ᛏ 1 0 ᚾ
+</div>
+
+<input type="password" id="password" placeholder="Mot ancien requis">
+<br>
+<button onclick="checkPassword()">Poursuivre le rituel</button>
+
+<p id="error" class="error"></p>
+
+<script>
+function checkPassword() {
+    var pass = document.getElementById("password").value.toUpperCase();
+
+    if(pass === "perception") or (pass === "PERCEPTION")  {
+        window.location.href = "epreuve3.html";
+    } else {
+        document.getElementById("error").innerText = "Ta perception n’est pas encore alignée.";
+    }
+}
+</script>
+
+
+</body>
+</html>
