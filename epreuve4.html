@@ -55,13 +55,15 @@ button:hover {
 
 .download {
     display: inline-block;
-    margin-top: 25px;
+    margin-top: 15px;
     padding: 12px 28px;
     border-radius: 25px;
     border: 1px solid white;
+    background: transparent;
     color: white;
     text-decoration: none;
     font-size: 14px;
+    cursor: pointer;
     transition: 0.3s;
 }
 
@@ -79,36 +81,26 @@ button:hover {
 <br><br>
 
 <h2 style="font-weight:300; letter-spacing:2px;">
-Épreuve de mémoire
+Épreuve du sens
 </h2>
 
 <p>
 
 Tu as traversé le feu.<br><br>
 
-Ce qui était caché a accepté de renaître.<br><br>
+Ce qui devait être révélé l'a été.<br><br>
 
-Mais certaines mémoires ne reviennent pas<br>
-lorsqu’on les cherche.<br><br>
+Mais tout ce qui se révèle<br>
+ne se laisse pas comprendre au premier regard.<br><br>
 
-Elles attendent qu’on les écoute.<br><br>
+Certaines choses doivent être perçues autrement<br>
+pour dévoiler ce qu'elles portent réellement.<br><br>
 
-La voix que tu vas entendre<br>
-porte quelque chose qui t’est destiné.<br><br>
+Ne cherche pas plus loin.<br>
+Tout est déjà là.<br><br>
 
-Mais méfie-toi de ce que tes oreilles<br>
-croiront comprendre.<br><br>
-
-Car parfois,<br>
-pour retrouver ce qui a été perdu,<br><br>
-
-il faut revenir là où tout a commencé.<br><br>
-
-Écoute.<br><br>
-
-Et si tu n’entends rien...<br><br>
-
-cherche un autre sens.
+<b>Si tu ne comprends pas...</b><br>
+<b>peut-être qu'il faut chercher dans l'autre sens.</b>
 
 </p>
 
@@ -118,13 +110,15 @@ cherche un autre sens.
 Télécharger l'indice
 </a>
 
-<br><br><br>
+<br><br>
 
 <input type="password" id="password" placeholder="Mot secret">
 
 <br>
 
-<button onclick="checkPassword()">Poursuivre le rituel</button>
+<button onclick="checkPassword()">
+Poursuivre le rituel
+</button>
 
 <p id="error" style="color:red;"></p>
 
@@ -141,7 +135,7 @@ function checkPassword() {
     } else {
 
         document.getElementById("error").innerText =
-        "La mémoire sommeille encore ...";
+        "Le message n’a pas encore retrouvé son sens ...";
 
     }
 
