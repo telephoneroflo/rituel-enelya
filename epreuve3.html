@@ -1,353 +1,124 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Mémoire — Enelya Noctea</title>
-
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            background: #000;
-            color: #f2f2f2;
-            font-family: "Georgia", "Times New Roman", serif;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            overflow-x: hidden;
-        }
-
-        .page {
-            width: 100%;
-            max-width: 700px;
-            min-height: 100vh;
-
-            padding: 35px 25px 50px;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            text-align: center;
-        }
-
-        /* LOGO */
-
-        .logo {
-            width: 75px;
-            height: auto;
-            margin-bottom: 45px;
-
-            filter: brightness(0) invert(1);
-
-            opacity: 0.95;
-        }
-
-        /* TITRE */
-
-        h1 {
-            margin: 0 0 38px;
-
-            font-size: 28px;
-            font-weight: normal;
-            letter-spacing: 5px;
-
-            color: #ffffff;
-        }
-
-        /* TEXTE */
-
-        .riddle {
-            width: 100%;
-            max-width: 600px;
-
-            font-size: 17px;
-            line-height: 1.9;
-
-            color: #dddddd;
-
-            margin-bottom: 45px;
-        }
-
-        .riddle p {
-            margin: 0 0 22px;
-        }
-
-        .emphasis {
-            color: #ffffff;
-            letter-spacing: 1px;
-        }
-
-        /* ZONE MOT DE PASSE */
-
-        .password-container {
-            width: 100%;
-            max-width: 360px;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .password-input {
-            width: 100%;
-
-            padding: 15px 20px;
-
-            background: #050505;
-
-            border: 1px solid rgba(255,255,255,0.75);
-            border-radius: 30px;
-
-            color: #ffffff;
-
-            font-family: Georgia, serif;
-            font-size: 16px;
-
-            text-align: center;
-
-            outline: none;
-
-            transition: all 0.3s ease;
-        }
-
-        .password-input::placeholder {
-            color: #777;
-        }
-
-        .password-input:focus {
-            border-color: #ffffff;
-
-            box-shadow:
-                0 0 12px rgba(255,255,255,0.18),
-                inset 0 0 8px rgba(255,255,255,0.04);
-        }
-
-        /* BOUTON */
-
-        .enter-button {
-            margin-top: 18px;
-
-            padding: 12px 32px;
-
-            background: transparent;
-
-            border: 1px solid rgba(255,255,255,0.75);
-            border-radius: 25px;
-
-            color: #ffffff;
-
-            font-family: Georgia, serif;
-            font-size: 15px;
-
-            cursor: pointer;
-
-            transition: all 0.3s ease;
-        }
-
-        .enter-button:hover {
-            background: #ffffff;
-            color: #000000;
-
-            box-shadow: 0 0 18px rgba(255,255,255,0.25);
-        }
-
-        /* MESSAGE D'ERREUR */
-
-        .message {
-            min-height: 25px;
-
-            margin-top: 22px;
-
-            font-size: 14px;
-
-            color: #aaa;
-
-            opacity: 0;
-
-            transition: opacity 0.4s ease;
-        }
-
-        .message.visible {
-            opacity: 1;
-        }
-
-        /* PETITS ECRANS */
-
-        @media (max-width: 600px) {
-
-            .page {
-                padding: 28px 22px 45px;
-            }
-
-            .logo {
-                width: 65px;
-                margin-bottom: 38px;
-            }
-
-            h1 {
-                font-size: 24px;
-                letter-spacing: 4px;
-                margin-bottom: 32px;
-            }
-
-            .riddle {
-                font-size: 16px;
-                line-height: 1.8;
-            }
-
-            .riddle p {
-                margin-bottom: 20px;
-            }
-
-            .password-container {
-                max-width: 330px;
-            }
-        }
-
-    </style>
+<meta charset="UTF-8">
+<title>Le Rituel</title>
+
+<style>
+
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 80px;
+}
+
+input {
+    padding: 14px;
+    width: 220px;
+    border: 1px solid white;
+    border-radius: 25px;
+    background: transparent;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input::placeholder {
+    color: rgba(255,255,255,0.5);
+}
+
+input:focus {
+    border-color: white;
+    box-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+button {
+    margin-top: 15px;
+    padding: 12px 28px;
+    border-radius: 25px;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: white;
+    color: black;
+}
+
+</style>
 </head>
-
 
 <body>
 
-    <div class="page">
+<img src="logo.jpg" style="width:80px; margin:0; padding:0;">
+<br><br>
 
-        <!-- LOGO -->
-        <img src="logo.png" alt="Enelya" class="logo">
+<h2 style="font-weight:300; letter-spacing:2px;">
+Épreuve du feu
+</h2>
 
+<p>
 
-        <!-- TITRE -->
-        <h1>MÉMOIRE</h1>
+Ce que tu cherches est déjà entre tes mains ...<br><br>
 
+mais il refuse encore de se montrer.<br><br>
 
-        <!-- ÉNIGME -->
-        <div class="riddle">
+Les anciennes savaient que le feu révèle ...<br><br>
 
-            <p>
-                Ce que tu cherches est déjà entre tes mains…
-            </p>
+mais qu’il ne se maîtrise jamais sans distance.<br><br>
 
-            <p>
-                mais il refuse encore de se montrer.
-            </p>
+Trop près, il consume.<br><br>
 
-            <p>
-                Les anciennes savaient que le feu révèle…
-            </p>
+Trop loin, il ne montre rien.<br><br>
 
-            <p>
-                mais qu’il ne se maîtrise jamais sans distance.
-            </p>
+Entre les deux ...<br><br>
 
-            <p>
-                Trop près, il consume.<br>
-                Trop loin, il ne montre rien.
-            </p>
+naît la révélation.<br><br>
 
-            <p class="emphasis">
-                Entre les deux…
-                <br>
-                naît la révélation.
-            </p>
+Approche ...<br><br>
 
-            <p>
-                Approche…
-                <br>
-                sans brûler.
-            </p>
+sans brûler.
 
-        </div>
+</p>
 
+<br>
 
-        <!-- MOT DE PASSE -->
-        <div class="password-container">
+<input type="password" id="password" placeholder="Mot secret">
 
-            <input
-                type="text"
-                id="password"
-                class="password-input"
-                placeholder="Le mot qui renaît…"
-                autocomplete="off"
-                spellcheck="false"
-            >
+<br>
 
-            <button
-                class="enter-button"
-                onclick="checkPassword()">
-                Entrer
-            </button>
+<button onclick="checkPassword()">Poursuivre le rituel</button>
 
-            <div id="message" class="message"></div>
+<p id="error" style="color:red;"></p>
 
-        </div>
+<script>
 
-    </div>
+function checkPassword() {
 
+    var pass = document.getElementById("password").value.toUpperCase();
 
-    <script>
+    if(pass === "RENAISSANCE") {
 
-        function checkPassword() {
+        window.location.href = "epreuve4.html";
 
-            const input =
-                document.getElementById("password").value
-                .trim()
-                .toLowerCase();
+    } else {
 
-            const message =
-                document.getElementById("message");
+        document.getElementById("error").innerText =
+        "Le feu n’a pas encore révélé ce qui sommeille dans tes mains ...";
 
+    }
 
-            if (input === "renaissance") {
+}
 
-                message.textContent =
-                    "La mémoire s'éveille…";
-
-                message.classList.add("visible");
-
-                setTimeout(function() {
-
-                    window.location.href =
-                        "epreuve4.html";
-
-                }, 1200);
-
-            }
-
-            else {
-
-                message.textContent =
-                    "Le Feu n'a pas encore révélé ses secrets ...";
-
-                message.classList.add("visible");
-
-            }
-        }
-
-
-        /* Permet de valider avec la touche Entrée */
-
-        document.getElementById("password").addEventListener(
-            "keypress",
-            function(event) {
-
-                if (event.key === "Enter") {
-                    checkPassword();
-                }
-
-            }
-        );
-
-    </script>
+</script>
 
 </body>
 </html>
