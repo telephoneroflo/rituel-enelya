@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Le Rituel</title>
+
+<style>
+
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 80px;
+}
+
+input {
+    padding: 14px;
+    width: 220px;
+    border: 1px solid white;
+    border-radius: 25px;
+    background: transparent;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input::placeholder {
+    color: rgba(255,255,255,0.5);
+}
+
+input:focus {
+    border-color: white;
+    box-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+button {
+    margin-top: 15px;
+    padding: 12px 28px;
+    border-radius: 25px;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: white;
+    color: black;
+}
+
+.download {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 28px;
+    border-radius: 25px;
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.download:hover {
+    background: white;
+    color: black;
+}
+
+</style>
+</head>
+
+<body>
+
+<img src="logo.jpg" style="width:80px; margin:0; padding:0;">
+<br><br>
+
+<h2 style="font-weight:300; letter-spacing:2px;">
+Épreuve de mémoire
+</h2>
+
+<p>
+
+Tu as traversé le feu.<br><br>
+
+Ce qui était caché a accepté de renaître.<br><br>
+
+Mais certaines mémoires ne reviennent pas<br>
+lorsqu’on les cherche.<br><br>
+
+Elles attendent qu’on les écoute.<br><br>
+
+La voix que tu vas entendre<br>
+porte quelque chose qui t’est destiné.<br><br>
+
+Mais méfie-toi de ce que tes oreilles<br>
+croiront comprendre.<br><br>
+
+Car parfois,<br>
+pour retrouver ce qui a été perdu,<br><br>
+
+il faut revenir là où tout a commencé.<br><br>
+
+Écoute.<br><br>
+
+Et si tu n’entends rien...<br><br>
+
+cherche un autre sens.
+
+</p>
+
+<br>
+
+<a href="audio.mp3" download class="download">
+Télécharger l'indice
+</a>
+
+<br><br><br>
+
+<input type="password" id="password" placeholder="Mot secret">
+
+<br>
+
+<button onclick="checkPassword()">Poursuivre le rituel</button>
+
+<p id="error" style="color:red;"></p>
+
+<script>
+
+function checkPassword() {
+
+    var pass = document.getElementById("password").value.toUpperCase();
+
+    if(pass === "MEMOIRE") {
+
+        window.location.href = "epreuve5.html";
+
+    } else {
+
+        document.getElementById("error").innerText =
+        "La mémoire sommeille encore ...";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
